@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #f6f8fc;
+  color: #334155;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 45% 55%;
+  padding: 14px;
+  gap: 14px;
+  box-sizing: border-box;
+  background: transparent;
+  min-height: 0;
+}
+
+.card-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-height: 0;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1e3a8a;
+  background: #e8edff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  margin-bottom: 0;
+  z-index: 2;
+}
+
+.overview {
+  width: 100%;
+  height: 100%;
+  padding: 36px 12px 12px;
+  box-sizing: border-box;
+  min-height: 0;
+}
+
+.detail-views {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 14px;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.heatmap,
+.sankey {
+  padding: 36px 12px 12px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.card {
+  background: #fbfcff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+}
+
+.control-row {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.control-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.control-select {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  outline: none;
+}
+
+.control-select:focus {
+  box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.35);
+}
+
+.visualization-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-height: 0;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 8px 12px;
+  background: rgba(15, 23, 42, 0.92);
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 100;
+  white-space: nowrap;
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.2);
+}
+
+text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: hanging;
+  fill: #0f172a;
+}
+
+.axis-label {
+  font-size: 12px;
+  fill: #334155;
+}
+
+.legend-text {
+  font-size: 11px;
+  fill: #64748b;
+}
+
+.debug-info {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  color: #4b5563;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.chart-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #64748b;
+  text-align: center;
+}
+
+.chart-message.error {
+  color: #d32f2f;
+}
